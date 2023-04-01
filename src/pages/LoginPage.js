@@ -34,6 +34,7 @@ function Alert(props) {
 }
 
 function LoginPage(props) {
+  // eslint-disable-next-line
   const { _, setAuthenticated } = useContext(AuthContext);
   const history = useHistory();
   const classes = useStyles();

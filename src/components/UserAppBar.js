@@ -33,7 +33,7 @@ export function UserAppBar() {
 
     setAuthenticated(true);
     setUsername(username);
-  }, [])
+  }, [setAuthenticated])
 
   return (
     <AppBar position="static">

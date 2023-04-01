@@ -34,6 +34,7 @@ function Alert(props) {
 }
 
 function RegisterPage(props) {
+  // eslint-disable-next-line no-unused-vars
   const { _, setAuthenticated } = useContext(AuthContext);
   const history = useHistory();
   const classes = useStyles();
