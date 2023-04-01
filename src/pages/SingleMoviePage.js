@@ -12,6 +12,7 @@ import {
 import { useStyles } from "./SingleMoviePage.styles";
 import axios from "axios";
 import { UserAppBar } from "../components/UserAppBar";
+import { config } from "../config/apis";
 
 function SingleMoviePage(props) {
   const classes = useStyles();
@@ -19,7 +20,7 @@ function SingleMoviePage(props) {
   const [movie, setMovie] = useState({ id: "", title: "", year: "", director: "", actors: [] });
 
   useEffect(() => {
-    axios.get(`http://localhost:5001/api/v1.0/films/${id}`).then((response) => {
+    axios.get(`${config.moviesDetailService}/api/v1.0/films/${id}`).then((response) => {
       setMovie(response.data);
     });
   }, [id]);
